@@ -1,0 +1,263 @@
+h2 {
+  color: #ff681a !important;
+}
+
+.error{
+  color: red;
+}
+
+.btn.focus,
+.btn:focus {
+  outline: 0;
+  box-shadow: none!important;
+}
+
+.signup {
+  background: #ff681a !important;
+  color: #fff !important;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.navbar-nav li:hover .dropdown-menu {
+  display: block;
+}
+
+.navbar-expand-lg .navbar-nav .dropdown-menu {
+  position: absolute;
+  margin-top: 0px;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='black' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E") !important;
+}
+
+a {
+  color: #000 !important;
+  text-decoration: none !important;
+}
+
+.bg-color {
+  background-color: #f4f4f4 !important;
+}
+
+.logo-text {
+  display: flex !important;
+  align-items: center;
+}
+
+.nav-link {
+  color: #000;
+}
+
+.banner-img {
+  /* Background pattern from Toptal Subtle Patterns */
+  background-image: url("img/banner/hero-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-size: cover;
+  position: relative;
+  padding-top: 140px;
+  padding-bottom: 120px;
+}
+.hero-h1 {
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.hero-title {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 60px;
+  line-height: 82px;
+  color: #fff;
+}
+
+.hero {
+  width: 100%;
+  height: 90vh;
+}
+
+#changetext {
+  color: #ff681a;
+  font-size: 60px;
+}
+
+#changetext:after {
+  content: "";
+  animation-name: changetextanimation;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes changetextanimation {
+  12% {
+    content: "United State";
+  }
+  25% {
+    content: "India";
+  }
+  50% {
+    content: "France";
+  }
+  75% {
+    content: "Germany";
+  }
+  100% {
+    content: "Bangkok";
+  }
+  125% {
+    content: "Japan";
+  }
+}
+
+/* Checkpoint 2 */
+
+.label-tag {
+  font-size: 20px;
+}
+
+#bookingForm input,
+optgroup,
+select,
+textarea {
+  width: 100% !important;
+  padding: 5px 5px;
+  border: 2px solid #ff681a;
+  border-radius: 5px;
+}
+
+.booking-form {
+  display: flex;
+  align-items: center;
+}
+
+
+.package-title{
+    font-size: 35px;
+      font-weight: 600;
+      margin: 3px 0;
+      font-weight: 600;
+}
+
+.package-style1 {
+  background-color: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 30px;
+  transition: all ease 0.4s;
+  height: 96%;
+}
+
+.card-img-d{
+height: 320px;
+}
+
+.checked {
+  color: #37d4d9;
+}
+
+.package-review span {
+  
+  font-size: 25px;
+}
+
+.package-price{
+      font-size: 30px !important;
+        font-weight: 600 !important;
+        transition: 0.5s;
+        color: #505050 !important;
+}
+
+.package-container{
+
+      padding: 0px 30px !important;
+}
+
+.package-btn{
+  text-align: end;
+}
+
+/* services */
+
+.outline-service img{
+width: 85px;
+height: 85px;
+}
+
+.outline-service h3 {
+  padding-top: 10px;
+}
+
+.outline-service{
+  border-radius: 8px;
+    padding: 15px 0px;
+    box-shadow: 0 0 8px #0000001a;
+}
+
+
+/* Slick Slider*/
+
+.responsive-slide img {
+  transition: transform 0.3s ease;
+  padding: 10px;
+  /* Smooth transition for the scaling effect */
+}
+
+.responsive-slide img:hover {
+  transform: scale(1.1);
+  /* Scales the image to 110% when hovered */
+}
+
+.responsive-slide .slick-dots li.slick-active button:before {
+  opacity: 0.75 ;
+  color: #ff681a !important;
+}
+
+.responsive-slide .slick-dots li button:before {
+  font-size: 10px !important;
+}
+
+.about h2{
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.bg-footer{
+  background-image: url("img/footer/footer-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+    background-position: center center;
+}
+
+.footer h3{
+  color: #fff;
+}
+
+.footer p {
+  color: #fff;
+}
+
+.footer{
+  padding: 80px 0px 0px 0px;
+}
+
+.foot-span{
+  padding-left: 5px;
+color: #fff !important;
+font-size: 20px;
+font-weight: 800;
+}
+
+.foot-link li a{
+  color: #fff !important;
+}
+
+.fafa-icon i{
+  color: #fff;
+  font-size: 30px;
+}

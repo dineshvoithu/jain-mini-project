@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voithu Travels</title>
+    <link rel="icon" href="img/logo/logo.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <!-- SLICK CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css"
+        integrity="sha512-wR4oNhLBHf7smjy0K4oqzdWumd+r5/+6QO/vDda76MW5iug4PT7v86FoEkySIJft3XA0Ae6axhIvHrqwm793Nw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css"
+        integrity="sha512-6lLUdeQ5uheMFbWm3CP271l14RsX1xtx+J5x2yeIDkkiBpeVTNhTqijME7GgRKKi6hCqovwCoBTlRBEC20M8Mg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- SLICK CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+
+
+    <nav class="navbar navbar-expand-lg bg-color">
+        <a class="navbar-brand logo-text" href="#">
+            <img src="img/logo/logo.png" width="50px" class="d-inline-block align-top" alt="">
+            <span style="padding-left: 5px;"> Voithu Travels</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText"
+            aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Book</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                        aria-haspopup="true" aria-expanded="false">
+                        Packages
+                    </a>
+
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="#">United State</a>
+                        <a class="dropdown-item" href="#">India</a>
+                        <a class="dropdown-item" href="#">France</a>
+                        <a class="dropdown-item" href="#">Germany</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Services</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Gallery</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">About Us</a>
+                </li>
+
+            </ul>
+            <span class="navbar-text">
+
+                <!-- Button trigger modal -->
+                <button type="button" class="btn signup" data-toggle="modal" data-target="#exampleModal">
+                    Register
+                </button>
+
+                <!-- Modal -->
+                <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Register</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <form form id="bookingForm" onsubmit="return registerForm()">
+
+                                    <div class="row" style="row-gap: 10px;">
+
+
+                                        <div class="col-lg-12">
+                                            <label for="fullname">Full Name:</label>
+                                            <input type="text" id="fullname" name="fullname">
+                                            <span class="error" id="nameError"></span>
+                                        </div>
+                                        <div class="col-lg-12">
+                                            <label for="contact">Contact Number:</label>
+                                            <input type="text" id="contact" name="contact">
+                                            <span class="error" id="contactError"></span>
+                                        </div>
+
+
+                                        <div class="col-lg-12">
+
+                                            <label for="dob">Date of Birth:</label>
+                                            <input type="date" id="dob" name="dob">
+                                            <span class="error" id="dobError"></span>
+                                        </div>
+
+
+                                        <div class="col-lg-12">
+                                            <label for="email">Email ID:</label>
+                                            <input type="email" id="email" name="email">
+                                            <span class="error" id="emailError"></span>
+
+                                        </div>
+
+                                        <div class="col-lg-12">
+                                            <label for="password">Password:</label>
+                                            <input type="password" id="password" name="password">
+                                            <span class="error" id="passwordError"></span>
+                                        </div>
+
+                                        <div class="col-lg-12">
+                                            <label for="gender">Gender:</label>
+                                            <select id="gender" name="gender">
+                                                <option value="">Select Gender</option>
+                                                <option value="male">Male</option>
+                                                <option value="female">Female</option>
+                                                <option value="other">Other</option>
+                                            </select>
+                                            <span class="error" id="genderError"></span>
+                                        </div>
+
+
+
+                                        <div class="col-lg-12 mt-3">
+                                            <input type="submit" class="btn signup" value="Register">
+                                        </div>
+
+                                        <div class="col-lg-12">
+                                            <p>Already Have An Account? <a href="#exampleModalOne" data-dismiss="modal" data-toggle="modal">Login</a></p>
+                                        </div>
+
+
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn signup" data-dismiss="modal">Close</button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <!-- Login trigger modal -->
+            <button type="button" class="btn signup" data-toggle="modal" data-target="#exampleModalOne">
+               Login
+            </button>
+            
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModalOne" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabelOne"
+                aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabelOne">Login Form</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form form id="bookingForm" onsubmit="return loginForm()">
+            
+                                <div class="row" style="row-gap: 10px;">
+                                    <div class="col-lg-12">
+                                        <label for="email">Email ID:</label>
+                                        <input type="email" id="email" name="emaill">
+                                        <span class="error" id="emaillError"></span>
+            
+                                    </div>
+            
+                                    <div class="col-lg-12">
+                                        <label for="password">Password:</label>
+                                        <input type="password" id="password" name="passwordd">
+                                        <span class="error" id="passworddError"></span>
+                                    </div>
+            
+                                    <div class="col-lg-12 mt-3">
+                                        <input type="submit" class="btn signup" value="Login">
+                                    </div>
+            
+                                    <div class="col-lg-12">
+                                        <p>Don't Have An Account? <a href="#exampleModal" data-dismiss="modal" data-toggle="modal">Register</a></p>
+                                    </div>
+            
+            
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn signup" data-dismiss="modal">Close</button>
+            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </span>
+        </div>
+    </nav>
+
+    <div class="jumbotron banner-img hero d-flex justify-content-center align-items-center">
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <h5 class="hero-h1">Welcome To Voithu Travels</h5>
+                <h2 class="hero-title">Visit <span id="changetext"></span></h2>
+                <a class="btn signup btn-lg" href="#" role="button">Book Now</a>
+            </div>
+        </div>
+    </div>
+
+
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <img src="img/home/about.png" alt="" width="100%">
+                </div>
+
+                <div class="col-lg-6 booking-form">
+                    <form id="bookingForm">
+
+                        <div class="row" style="row-gap: 10px;">
+                            <div class="col-lg-12">
+                                <h2 style="color: #ff681a;">Book And Explore Now</h2>
+                            </div>
+                            <div class="col-lg-6">
+                                <label class="label-tag" for="place">WHERE TO:</label>
+
+                                <select id="place" required>
+                                    <option value="" disabled selected>Select a place</option>
+                                    <option value="India">India</option>
+                                    <option value="Spain">Spain</option>
+                                    <option value="Japan">Japan</option>
+                                    <option value="Thailand">Thailand</option>
+                                </select>
+
+                            </div>
+                            <div class="col-lg-6">
+                                <label class="label-tag" for="persons">HOW MANY PERSONS:</label>
+                                <input type="number" id="persons" min="1" required>
+                            </div>
+
+
+
+                            <div class="col-lg-6">
+                                <label class="label-tag" for="startDate">START DATE:</label>
+                                <input type="date" id="startDate" required onchange="setCorrectEndDate()">
+                            </div>
+                            <div class="col-lg-6">
+                                <label class="label-tag" for="endDate">END DATE:</label>
+                                <input type="date" id="endDate" required>
+
+                            </div>
+
+
+                            <div class="col-lg-12">
+                                <label class="label-tag" for="description">DESCRIPTION:</label>
+
+                            </div>
+
+                            <div class="col-lg-12">
+                                <textarea id="description" width="100%" required></textarea>
+                            </div>
+
+                            <div class="col-lg-12 mt-3 text-center">
+                                <button type="button" class="btn signup" onclick="validateForm()">Book Now</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container-fluid package-container mt-5">
+            <div class="row">
+                <div class="col-lg-12 pb-4">
+                    <h2 class="text-center">Our Packages</h2>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card package-style1">
+                        <img class="card-img-top card-img-d" src="img/packages/destinations-1-1.webp"
+                            alt="Card image cap">
+                        <div class="card-body">
+                            <h2 class="card-title package-title">Thailand</h2>
+                            <h5>Phi Phi Islands</h5>
+                            <p class="card-text">A popular destination for boating, the Phi Phi Islands are made up of
+                                Phi Phi Don and Phi Phi Leh.</p>
+                            <div class="package-review">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star unchecked"></span>
+                                <span class="fa fa-star unchecked"></span>
+                            </div>
+                            <div class="row mt-2">
+                                <div class="col-lg-6">
+                                    <h2 class="package-price">$299</h2>
+                                </div>
+                                <div class="col-lg-6 package-btn">
+                                    <a href="#" class="btn signup">Book Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="card package-style1">
+                        <img class="card-img-top card-img-d" src="img/packages/destinations-1-2.webp"
+                            alt="Card image cap">
+                        <div class="card-body">
+                            <h2 class="card-title package-title">Japan</h2>
+                            <h5>Senso-ji</h5>
+                            <p class="card-text">Sensō-ji is an ancient Buddhist temple in Asakusa, Tokyo, Japan. It is
+                                Tokyo's oldest-established temple, and one of its
+                                most significant.</p>
+                            <div class="package-review">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star unchecked"></span>
+                                <span class="fa fa-star unchecked"></span>
+                                <span class="fa fa-star unchecked"></span>
+                            </div>
+                            <div class="row mt-2">
+                                <div class="col-lg-6">
+                                    <h2 class="package-price">$399</h2>
+                                </div>
+                                <div class="col-lg-6 package-btn">
+                                    <a href="#" class="btn signup">Book Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="card package-style1">
+                        <img class="card-img-top card-img-d" src="img/packages/destinations-1-3.webp"
+                            alt="Card image cap">
+                        <div class="card-body">
+                            <h2 class="card-title package-title">Spain</h2>
+                            <h5>Seville</h5>
+                            <p class="card-text">Seville is the capital and largest city of the Spanish autonomous
+                                community of Andalusia and the province of Seville. </p>
+                            <div class="package-review">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star unchecked"></span>
+                                <span class="fa fa-star unchecked"></span>
+                            </div>
+                            <div class="row mt-2">
+                                <div class="col-lg-6">
+                                    <h2 class="package-price">$499</h2>
+                                </div>
+                                <div class="col-lg-6 package-btn">
+                                    <a href="#" class="btn signup">Book Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="card package-style1">
+                        <img class="card-img-top card-img-d" src="img/packages/destinations-1-4.webp"
+                            alt="Card image cap">
+                        <div class="card-body">
+                            <h2 class="card-title package-title">Italy</h2>
+                            <h5>Rome</h5>
+                            <p class="card-text">Rome, historic city and capital of Roma provincia of Lazio regione and
+                                of the country of Italy.
+                                Rome is located in the central portion of the Italian peninsula. </p>
+                            <div class="package-review">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star unchecked"></span>
+                            </div>
+                            <div class="row mt-2">
+                                <div class="col-lg-6">
+                                    <h2 class="package-price">$599</h2>
+                                </div>
+                                <div class="col-lg-6 package-btn">
+                                    <a href="#" class="btn signup">Book Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card package-style1">
+                        <img class="card-img-top card-img-d" src="img/packages/destinations-1-5.webp"
+                            alt="Card image cap">
+                        <div class="card-body">
+                            <h2 class="card-title package-title">Netherland</h2>
+                            <h5>Belgium</h5>
+                            <p class="card-text">The Netherlands, a country in northwestern Europe, is known for a flat
+                                landscape of canals, tulip fields, windmills and
+                                cycling routes.</p>
+                            <div class="package-review">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star unchecked"></span>
+                                <span class="fa fa-star unchecked"></span>
+                            </div>
+                            <div class="row mt-2">
+                                <div class="col-lg-6">
+                                    <h2 class="package-price">$249</h2>
+                                </div>
+                                <div class="col-lg-6 package-btn">
+                                    <a href="#" class="btn signup">Book Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card package-style1">
+                        <img class="card-img-top card-img-d" src="img/packages/destinations-1-6.webp"
+                            alt="Card image cap">
+                        <div class="card-body">
+                            <h2 class="card-title package-title">India</h2>
+                            <h5>Lakshadweep</h5>
+                            <p class="card-text">Lakshadweep is a tropical archipelago of 36 atolls and coral reefs in
+                                the Laccadive Sea, off the coast of Kerala, India. Not all of the islands are inhabited,
+                                and only a few are open.</p>
+                            <div class="package-review">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                            </div>
+                            <div class="row mt-2">
+                                <div class="col-lg-6">
+                                    <h2 class="package-price">$549</h2>
+                                </div>
+                                <div class="col-lg-6 package-btn">
+                                    <a href="#" class="btn signup">Book Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card package-style1">
+                        <img class="card-img-top card-img-d" src="img/packages/destinations-1-7.webp"
+                            alt="Card image cap">
+                        <div class="card-body">
+                            <h2 class="card-title package-title">Canada</h2>
+                            <h5>Vancouver</h5>
+                            <p class="card-text">Vancouver, a bustling west coast seaport in British Columbia, is among
+                                Canada’s densest, most ethnically diverse cities.
+                                A popular filming location, it’s surrounded by mountains, and also has thriving art,
+                                theatre and music scenes.</p>
+                            <div class="package-review">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star unchecked"></span>
+                                <span class="fa fa-star unchecked"></span>
+                                <span class="fa fa-star unchecked"></span>
+                            </div>
+                            <div class="row mt-2">
+                                <div class="col-lg-6">
+                                    <h2 class="package-price">$749</h2>
+                                </div>
+                                <div class="col-lg-6 package-btn">
+                                    <a href="#" class="btn signup">Book Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="card package-style1">
+                        <img class="card-img-top card-img-d" src="img/packages/destinations-1-8.webp"
+                            alt="Card image cap">
+                        <div class="card-body">
+                            <h2 class="card-title package-title">Mexico</h2>
+                            <h5>Mexico Cities</h5>
+                            <p class="card-text">Mexico City is the densely populated, high-altitude capital of Mexico.
+                                It's known for its Templo Mayor (a 13th-century
+                                Aztec temple), the baroque Catedral Metropolitana de México of the Spanish
+                                conquistadors.</p>
+                            <div class="package-review">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star unchecked"></span>
+                                <span class="fa fa-star unchecked"></span>
+                            </div>
+                            <div class="row mt-2">
+                                <div class="col-lg-6">
+                                    <h2 class="package-price">$849</h2>
+                                </div>
+                                <div class="col-lg-6 package-btn">
+                                    <a href="#" class="btn signup">Book Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4">
+                    <div class="card package-style1">
+                        <img class="card-img-top card-img-d" src="img/packages/destinations-1-9.webp"
+                            alt="Card image cap">
+                        <div class="card-body">
+                            <h2 class="card-title package-title">Indonesia</h2>
+                            <h5>Kelingking Beach</h5>
+                            <p class="card-text">It may seem like Bali has an endless supply of gram-worthy backdrops,
+                                but the whole island is only 70 miles top to
+                                bottom, which means you can see a good chunk in just three days.</p>
+                            <div class="package-review">
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star checked"></span>
+                                <span class="fa fa-star unchecked"></span>
+                            </div>
+                            <div class="row mt-2">
+                                <div class="col-lg-6">
+                                    <h2 class="package-price">$699</h2>
+                                </div>
+                                <div class="col-lg-6 package-btn">
+                                    <a href="#" class="btn signup">Book Now</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container mb-5">
+            <div class="row" style="row-gap: 20px;">
+
+                <div class="col-lg-12 pb-4">
+                    <h2 class="text-center">Our Services</h2>
+                </div>
+
+                <div class="col-lg-4 text-center">
+                    <div class="outline-service">
+                        <img src="img/home/icon/Flight-3.png" alt="">
+                        <h3>Flight</h3>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 text-center">
+                    <div class="outline-service">
+                        <img src="img/home/icon/visa.png" alt="">
+                        <h3>Visa</h3>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 text-center">
+                    <div class="outline-service">
+                        <img src="img/home/icon/Hotel-3.png" alt="">
+                        <h3>Hotel</h3>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 text-center">
+                    <div class="outline-service">
+                        <img src="img/home/icon/Meals-3.png" alt="">
+                        <h3>Meals</h3>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 text-center">
+                    <div class="outline-service">
+                        <img src="img/home/icon/Transport-3.png" alt="">
+                        <h3>Transport</h3>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 text-center">
+                    <div class="outline-service">
+                        <img src="img/home/icon/Camera-1.png" alt="">
+                        <h3>Photography</h3>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 pb-4">
+                    <h2 class="text-center">Our Gallery</h2>
+                </div>
+                <div class="col-lg-12">
+                    <div class="responsive-slide">
+                        <div>
+                            <figure>
+                                <img src="img/packages/destinations-1-1.webp" alt="" class="img-fluid">
+                                <figcaption>
+                                    <h3 class="text-center pt-2">Thailand</h3>
+                                </figcaption>
+                            </figure>
+
+                        </div>
+                        <div>
+                            <figure>
+                                <img src="img/packages/destinations-1-9.webp" alt="" class="img-fluid">
+                                <figcaption>
+                                    <h3 class="text-center pt-2">Indonesia</h3>
+                                </figcaption>
+                            </figure>
+
+                        </div>
+
+                        <div>
+                            <figure>
+                                <img src="img/packages/destinations-1-2.webp" alt="" class="img-fluid">
+                                <figcaption>
+                                    <h3 class="text-center pt-2">Japan</h3>
+                                </figcaption>
+                            </figure>
+
+                        </div>
+                        <div>
+                            <figure>
+                                <img src="img/packages/destinations-1-3.webp" alt="" class="img-fluid">
+                                <figcaption>
+                                    <h3 class="text-center pt-2">Spain</h3>
+                                </figcaption>
+                            </figure>
+
+                        </div>
+                        <div>
+                            <figure>
+                                <img src="img/packages/destinations-1-5.webp" alt="" class="img-fluid">
+                                <figcaption>
+                                    <h3 class="text-center pt-2">Netherland</h3>
+                                </figcaption>
+                            </figure>
+
+                        </div>
+                        <div>
+                            <figure>
+                                <img src="img/packages/destinations-1-4.webp" alt="" class="img-fluid">
+                                <figcaption>
+                                    <h3 class="text-center pt-2">Italy</h3>
+                                </figcaption>
+                            </figure>
+
+                        </div>
+                        <div>
+                            <figure>
+                                <img src="img/packages/destinations-1-6.webp" alt="" class="img-fluid">
+                                <figcaption>
+                                    <h3 class="text-center pt-2">India</h3>
+                                </figcaption>
+                            </figure>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section>
+        <div class="container mt-5">
+            <div class="row">
+
+                <div class="col-lg-6 about">
+                    <h6>ABOUT US</h6>
+                    <h5 class="pb-2" style="color: #ff681a !important;">Explore the world with us, one adventure at a
+                        time.</h5>
+                    <h2 style="color: #000 !important;" class="pb-3">The perfect vacation come true with our Travel
+                        Agency</h2>
+                    <p class="pb-3">We are a team of experienced travel experts who specialize in planning and
+                        organizing unforgettable travel experiences
+                        for our clients with a wide range of travel services, including flight bookings, hotel
+                        reservations and more. There are many variations of passages of available but the majority have
+                        suffered alteration in some form, by injected
+                        hum randomised words which don’t look even slightly.</p>
+
+                    <button class="btn signup">Read More</button>
+
+                </div>
+                <div class="col-lg-6">
+                    <img src="img/aboutus/about-us-pic.jpg" alt="" width="100%">
+                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+    
+
+
+    <footer class="bg-footer">
+        <div class="container footer">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="pb-2"><img src="img/logo/logo.png" alt="" width="80px">
+                        <span class="foot-span"> Voithu Travels</span>
+                    </div>
+                    <p>We are a team of experienced travel experts who specialize in planning and organizing
+                        unforgettable travel experiences</p>
+                    <p class="fafa-icon"><a href="#"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
+                        <a href="#"><i class="fa fa-instagram pl-2" aria-hidden="true"></i></a>
+                    </p>
+                </div>
+
+                <div class="col-lg-3">
+                    <h3>Useful Links</h3>
+                    <p>
+                    <ul class="foot-link" style="color: #fff;">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Book</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Gallery</a></li>
+                    </ul>
+                    </p>
+                </div>
+
+                <div class="col-lg-3">
+                    <h3>Places To Visit</h3>
+                    <p>
+                    <ul class="foot-link" style="color: #fff;">
+                        <li><a href="#">Japan</a></li>
+                        <li><a href="#">India</a></li>
+                        <li><a href="#">Thailand</a></li>
+                        <li><a href="#">Netherland</a></li>
+                    </ul>
+                    </p>
+                </div>
+
+                <div class="col-lg-3">
+                    <h3>Map</h3>
+                    <p><iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d497698.77492875466!2d77.30126945310809!3d12.95445953149592!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1670c9b44e6d%3A0xf8dfc3e8517e4fe0!2sBengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1729964864647!5m2!1sen!2sin"
+                            width="100%" height="auto" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe></p>
+                </div>
+
+                <div class="col-lg-12 text-center">
+                    <p>Copyright © 2024 <span> Voithu Travels. All Rights Reserved</span> Made with <i
+                            class="fa fa-heart" aria-hidden="true"></i> by <a href="#"
+                            style="color: #fff !important;">Dinesh Voithu</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-migrate/3.5.2/jquery-migrate.min.js"
+        integrity="sha512-BzvgYEoHXuphX+g7B/laemJGYFdrq4fTKEo+B3PurSxstMZtwu28FHkPKXu6dSBCzbUWqz/rMv755nUwhjQypw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
+        integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
+
+
+
+    <script src="main.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.responsive-slide').slick({
+                dots: true,
+                infinite: false,
+                speed: 300,
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 2000,
+                responsive: [
+                    {
+                        breakpoint: 1024,
+                        settings: {
+                            slidesToShow: 3,
+                            slidesToScroll: 3,
+                            infinite: true,
+                            dots: true
+                        }
+                    },
+                    {
+                        breakpoint: 600,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 2
+                        }
+                    },
+
+                    {
+                        breakpoint: 480,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
+                    }
+                    // You can unslick at a given breakpoint now by adding:
+                    // settings: "unslick"
+                    // instead of a settings object
+                ]
+            });
+        });
+    </script>
+</body>
+
+</html>
